@@ -49,7 +49,7 @@ class SearchCiqualController extends Controller
     }
 
     /**
-     * @param int $id
+     * @param integer $id
      *
      * @return array
      *
@@ -69,12 +69,14 @@ class SearchCiqualController extends Controller
     }
 
     /**
-     * @param int $uri
+     * @param mixed $uri
+     * @param integer $maxDepth
      *
      * @return array
      */
-    private function getResult($uri): array
+    private function getResult($uri, int $maxDepth = 10): array
     {
+        //Better to do in service (function public) if used anywhere in the application
         if (!$uri) {
             return [];
         }
@@ -83,7 +85,7 @@ class SearchCiqualController extends Controller
         if (!$contents = $stream->getContents()) {
             return [];
         }
-        $result = json_decode($contents, true, $maxDepth = 10);
+        $result = json_decode($contents, true, $maxDepth);
 
         return $result;
     }
