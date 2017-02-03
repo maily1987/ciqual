@@ -16,7 +16,7 @@ For test
 
 You can use [Postman](https://www.getpostman.com), [Insomnia](https://insomnia.rest) or call the API with curl
 ```
-curl --header "Accept:application/ld-json"  http://localhost
+curl --header "Accept:application/json"  http://localhost
 ```
 
 ## Run tests
