@@ -1,0 +1,23 @@
+{% extends 'AppBundle::base.html.twig' %}
+
+{% block content %}
+	{{ form(form, {'method': 'POST'}) }}
+
+	{% if ciquals %}
+		<h1>List ciqual by your search:</h1>
+		<ul>
+			{% for ciqual in ciquals['ciquals'] %}
+				<li >
+					<a href="{{ path('ciqual_detail', {'id': ciqual.id}) }}">{{ ciqual.oRIGGPFR }}</a>
+				</li>
+			{% endfor %}
+		</ul>
+	{% endif %}
+	
+	{% if notFound %}
+		No result for your search
+	{% endif %}
+
+{% endblock %}
+
+

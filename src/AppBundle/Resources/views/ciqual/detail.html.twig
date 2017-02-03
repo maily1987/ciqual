@@ -1,0 +1,38 @@
+{% extends 'AppBundle::base.html.twig' %}
+
+{% block content %}
+	{% if ciqual %}
+		<h1>Ciqual of {{ ciqual.oRIGFDNM }}</h1>
+		<ul>
+			<li >ORIGGPFR: {{ ciqual.oRIGGPFR }}</li>
+			<li >ORIGFDCD: {{ ciqual.oRIGFDCD }}</li>
+			<li >ORIGFDNM: {{ ciqual.oRIGFDNM }}</li>
+			<li >Energie, Règlement UE N° 1169/2011 (kJ/100g): {{ ciqual.energieKj }}</li>
+			<li >Energie, Règlement UE N° 1169/2011 (kcal/100g): {{ ciqual.energieKcal }}</li>
+			<li >Energie, N x facteur Jones, avec fibres  (kJ/100g): {{ ciqual.energieFibreKj }}</li>
+			<li >Energie, N x facteur Jones, avec fibres  (kcal/100g): {{ ciqual.water }}</li>
+			<li >Protéines (g/100g): {{ ciqual.proteins }}</li>
+			<li >Protéines brutes, N x 6.25 (g/100g): {{ ciqual.brutProteins }}</li>
+			<li >Glucides (g/100g): {{ ciqual.carbohydrates }}</li>
+			<li >Lipides (g/100g): {{ ciqual.lipids }}</li>
+			<li >Sucres (g/100g): {{ ciqual.sugars }}</li>
+			<li >Amidon (g/100g): {{ ciqual.starch }}</li>
+			<li >Fibres alimentaires (g/100g): {{ ciqual.fibre }}</li>
+			<li >Polyols totaux (g/100g): {{ ciqual.polyols }}</li>
+			<li >Cendres (g/100g): {{ ciqual.ashes }}</li>
+			<li >Alcool (g/100g): {{ ciqual.alcohol }}</li>
+			<li >Acides organiques (g/100g): {{ ciqual.organicAcids }}</li>
+			<li >AG saturés (g/100g): {{ ciqual.aGSaturated }}</li>
+			<li >Cholestérol (mg/100g): {{ ciqual.cholesterol }}</li>
+			<li >Sel chlorure de sodium (g/100g): {{ ciqual.salt }}</li>
+			<li >Calcium (mg/100g): {{ ciqual.calcium }}</li>
+			<li >Chlorure (mg/100g): {{ ciqual.chloride }}</li>
+			<li >Cuivre (mg/100g): {{ ciqual.copper }}</li>
+			<li >Fer (mg/100g): {{ ciqual.iron }}</li>
+			<li >Iode (µg/100g): {{ ciqual.iodine }}</li>
+		</ul>
+	{% endif %}
+
+{% endblock %}
+
+
